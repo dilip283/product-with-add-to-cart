@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    height: 100vh;
+}
+
+header {
+    /* height: 100vh; */
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.title {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    column-gap: 10px;
+    color: #007F61;
+    font-size: 25px;
+    font-family: 'poppins';
+    margin-bottom: 20px;
+}
+
+.title::before,
+.title::after {
+    content: " ";
+    background-color: #C8C8C8;
+    height: 2px;
+    display: block;
+}
+
+/* sec 2 */
+section {
+    max-width: 575px;
+    margin: auto;
+    border: 1px solid #c8c8c8;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+.bg-color {
+    background-color: #F4FBF9;
+    border: 1px solid #007F61;
+}
+
+label {
+    display: flex;
+}
+
+input {
+    flex: 0 0 auto;
+    margin-right: 18px;
+}
+
+span {
+    flex: 1 1 auto;
+}
+
+.discount {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.price{
+    font-size: 18px;
+    font-weight: 600;
+}
+input[type="radio"]{
+    accent-color: #007F61;
+}
+
+.popular-text{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    font-size: 18px;
+    font-weight: 600;
+    color: #007F61;
+}
+.popular-discount{
+    color: #000000;
+    font-size: 18px;
+    font-weight: 600;
+}
+.discount-price{
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: center;
+    text-decoration: line-through;
+    color: #9f9f9f;
+}
+
+.shipping-section{
+    max-width: 575px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.left-col h5{
+    font-size: 20px;
+    font-weight: 500;
+    color: #007F61;
+    opacity: 60%;
+}
+.right-col h5{
+    font-size: 20px;
+    font-weight: 500;
+}
+.right-col h5 span{
+    font-size: 20px;
+    font-weight: 600;
+}
+.btn-row{
+    max-width: 575px;
+    margin: auto;
+    margin-top: 20px;
+}
+.add-to-cart{
+    border: none;
+    padding: 15px;
+    background-color: #007F61;
+    width: 100%;
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: 500;
+    border-radius: 5px 5px 5px 0px;
+
+    margin-bottom: 10px;
+}
+.btn-row h6{
+    font-size: 16px;
+    font-weight: 300;
+    color: #000000;
+    text-align: end;
+    font-style: italic;
+}
+
+/* .categories{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 42%;
+    margin-left: 30px;
+}
+.dropdowns{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 40%;
+    column-gap: 10px;
+    margin-left: 30px;
+} */
+.categories {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .dropdowns {
+    width: 50%;
+    margin: 0px 0px 10px 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+    
+
+  }
+  .headings{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 50%;
+    margin-left: 30px;
+  }
+.categories h6{
+    font-size: 16px;
+    font-weight: 400;
+
+}
+.size{
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+/* Responsive for mobile */
+@media screen and (max-width: 320px){
+    body{
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+    .title{
+        font-size: 11px;
+    }
+    .left-col h5{
+        font-size: 14px;
+    }
+    .right-col h5{
+        font-size: 14px;
+    }
+    .right-col h5 span{
+        font-size: 14px;
+    }
+}
+@media only screen and (min-width: 320px) and (max-width: 571px){
+    body{
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+    .title{
+        font-size: 12px;
+    }
+    .left-col h5{
+        font-size: 16px;
+    }
+    .right-col h5{
+        font-size: 16px;
+    }
+    .right-col h5 span{
+        font-size: 16px;
+    }
+}

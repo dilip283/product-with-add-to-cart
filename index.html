@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Css Path -->
+    <link rel="stylesheet" href="/style.css">
+    <title>Bundle & Save</title>
+
+</head>
+
+<body>
+    <header>
+        <h1 class="title">Bundle & Save</h1>
+    </header>
+    <form>
+        <section class="bg-color">
+            <label>
+                <input type="radio" id="firstRadio" name="name" value="val-2">
+                <span class="radio-txt">1 Pair <br><span class="price">DKK 195.00</span></span>
+                <span class="discount">50% OFF</span>
+            </label>
+            <div class="categories">
+                <div class="headings">
+                    <h6>Size</h6>
+                    <h6>Colour</h6>
+                </div>
+                <div class="dropdowns">
+                    <select class="size">
+                        <option value="s">S</option>
+                        <option value="m">M</option>
+                        <option value="l">L</option>
+                        <option value="xl">XL</option>
+                    </select>
+                    <select class="size">
+                        <option value="0">Colour</option>
+                        <option value="red">Red</option>
+                        <option value="green">Green</option>
+                        <option value="blue">Blue</option>
+                        <option value="white">White</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="bg-color">
+            <label>
+                <input type="radio" id="secondRadio" name="name" value="val-2">
+                <span class="radio-txt">2 Pair <br><span class="price">DKK 345.00</span></span>
+                <span class="discount-price">DKK 195.00</span>
+                <span class="popular-text">Most Popular<br><span class="popular-discount">40% OFF</span></span>
+            </label>
+            <div class="categories">
+                <div class="headings">
+                    <h6>Size</h6>
+                    <h6>Colour</h6>
+                </div>
+
+                <div class="dropdowns">
+                    <select class="size">
+                        <option value="s">S</option>
+                        <option value="m">M</option>
+                        <option value="l">L</option>
+                        <option value="xl">XL</option>
+                    </select>
+                    <select class="size">
+                        <option value="0">Colour</option>
+                        <option value="red">Red</option>
+                        <option value="green">Green</option>
+                        <option value="blue">Blue</option>
+                        <option value="white">White</option>
+                    </select>
+                    <select class="size">
+                        <option value="s">S</option>
+                        <option value="m">M</option>
+                        <option value="l">L</option>
+                        <option value="xl">XL</option>
+                    </select>
+                    <select class="size">
+                        <option value="0">Colour</option>
+                        <option value="red">Red</option>
+                        <option value="green">Green</option>
+                        <option value="blue">Blue</option>
+                        <option value="white">White</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-color">
+            <label>
+                <input type="radio" id="thirdRadio" name="name" value="val-2">
+                <span class="radio-txt">3 Pair <br><span class="price">DKK 528.00</span></span>
+                <span class="discount">60% OFF</span>
+            </label>
+            <div class="categories">
+                <div class="headings">
+                    <h6>Size</h6>
+                    <h6>Colour</h6>
+                </div>
+                <div class="dropdowns">
+                    <select class="size">
+                        <option value="s">S</option>
+                        <option value="m">M</option>
+                        <option value="l">L</option>
+                        <option value="xl">XL</option>
+                    </select>
+                    <select class="size">
+                        <option value="0">Colour</option>
+                        <option value="red">Red</option>
+                        <option value="green">Green</option>
+                        <option value="blue">Blue</option>
+                        <option value="white">White</option>
+                    </select>
+                    <select class="size">
+                        <option value="s">S</option>
+                        <option value="m">M</option>
+                        <option value="l">L</option>
+                        <option value="xl">XL</option>
+                    </select>
+                    <select class="size">
+                        <option value="0">Colour</option>
+                        <option value="red">Red</option>
+                        <option value="green">Green</option>
+                        <option value="blue">Blue</option>
+                        <option value="white">White</option>
+                    </select>
+                    <select class="size">
+                        <option value="s">S</option>
+                        <option value="m">M</option>
+                        <option value="l">L</option>
+                        <option value="xl">XL</option>
+                    </select>
+                    <select class="size">
+                        <option value="0">Colour</option>
+                        <option value="red">Red</option>
+                        <option value="green">Green</option>
+                        <option value="blue">Blue</option>
+                        <option value="white">White</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+    </form>
+    <div class="shipping-section">
+        <div class="left-col">
+            <h5>Free 2 Day Shipping</h5>
+        </div>
+        <div class="right-col">
+            <h5>Total: <span>DKK 360.00</span></h5>
+        </div>
+
+    </div>
+    <div class="btn-row">
+        <button class="add-to-cart">+ Add to Cart</button>
+        <h6>© Powered by Pumper</h6>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const radioButtons = document.querySelectorAll('input[type="radio"]');
+            const categoriesSections = document.querySelectorAll('.categories');
+
+            categoriesSections.forEach(function (section) {
+                section.style.display = 'none';
+                const dropdowns = section.querySelectorAll('.size');
+                dropdowns.forEach(function (dropdown) {
+                    dropdown.style.display = 'none';
+                });
+            });
+
+            const form = document.querySelector('form');
+            form.addEventListener('change', function (event) {
+                if (event.target.type === 'radio') {
+                    const selectedSection = event.target.closest('section');
+
+                    categoriesSections.forEach(function (section) {
+                        section.style.display = 'none';
+                        const dropdowns = section.querySelectorAll('.size');
+                        dropdowns.forEach(function (dropdown) {
+                            dropdown.style.display = 'none';
+                        });
+                    });
+
+                    const categoriesSection = selectedSection.querySelector('.categories');
+
+                    categoriesSection.style.display = 'grid';
+
+                    const dropdownsToShow = categoriesSection.querySelectorAll('.size');
+                    dropdownsToShow.forEach(function (dropdown) {
+                        dropdown.style.display = 'block';
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
